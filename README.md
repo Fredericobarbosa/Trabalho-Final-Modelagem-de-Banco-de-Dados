@@ -64,6 +64,7 @@
 ## Modelagem Lógica:
 <img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Modelo%20logico.PNG" alt="Modelo das tabelas">
 
+#### Tabelas e tipos de dados:
 * Cliente:  CPF(varchar(14)/PK) , Nome(varchar(50)), Rua(varchar(50)), N°(int), Cidade(varchar(15)), Estado(char(2));
 * Telefone:  id_telefone(int/PK) , telefone(varchar(20)),  cliente_cpf(varchar(14)/FK);
 * E-mail:  id_email(int/PK) , email(varchar(50)),  cliente_cpf(varchar(14)/FK);
@@ -75,49 +76,105 @@
 ---
 ---
 ## Dados
+#### Inserção de dados em todas as tabelas:
+#### Cliente:
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Dados%20Cliente.PNG" alt=" Dados Cliente">
+
+####  Email:
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Dados%20Email.PNG" alt="Dados Email">
+
+#### Telefone:
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Dados%20Telefone.PNG" alt="Dados Telefone">
+
+#### Funcionário:
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Dados%20Funcionario.PNG" alt="Dados Funcionário">
+
+#### Atendimento:
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Dados%20Atendimentos.PNG" alt="Dados Atendimento">
+
+#### Aluguel:
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Dados%20Aluguel.PNG" alt="Dados Aluguel">
+
+#### Veículo:
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Dados%20Veiculos.PNG" alt="Dados Veiculos">
+
+#### Tipo de Veículo:
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Dados%20Tipo%20de%20Veiculo.PNG" alt="Dados Tipo de Veículo">
+
 ---
 ---
 ## CRUD
+#### C - Create (INSERT)
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Create.PNG" alt="Criação d novos dados">
+
+#### R - Read (Select)
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Select%20Clientes.PNG" alt="Seleção dos clientes">
+
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Select%20Funcionario.PNG" alt="Seleção Funcionário">
+
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Select%20Atendimento.PNG" alt="Seleção Atendimento">
+
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Select%20Aluguel.PNG" alt="Seleção Aluguel">
+
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Select%20Tipos%20Veiculos.PNG" alt="Seleção Tipo de Veículos">
+
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Select%20Veiculo.PNG" alt="Seleção Veículos">
+
+#### U - Update
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Update.PNG" alt="Atualização dos dados">
+
+#### D - Delete
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Delete.PNG" alt="Apagar os dados">
+
 ---
 ## Relatórios:
 #### Seleção, filtro e ordenação:
 #### 1 Listar todos os clientes e seus respectivos endereços:
 #### SELECT CPF, Nome, Rua, N, Cidade, Estado FROM Cliente;
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Filtro%201.PNG" alt="Filtro 01">
 
 #### 2 Listar os veículos disponíveis para aluguel, planejados pelo ano de fabricação:
 #### SELECT Placa, Modelo, Ano_Fabricacao, Cor, Situacao FROM Veiculo WHERE Situacao = 'Disponível' ORDER BY Ano_Fabricacao DESC;
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Filtro%202.PNG" alt="Filtro 02">
 
 #### 3 Veja os tipos de veículos e suas tarifas diárias em ordem alfabética de categoria:
 #### SELECT Categoria, Tarifa_Diaria FROM Tipo_Veiculo ORDER BY Categoria;
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Filtro%203.PNG" alt="Filtro 03">
  
 #### 4 Obtenha a matrícula, nome e cargo de todos os funcionários designados para determinado cargo:
 #### SELECT Matricula, Nome, Cargo FROM Funcionario ORDER BY Cargo;
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Filtro%204.PNG" alt="Filtro 04">
 
 #### 5 Listar os aluguéis com valor superior a R$400, ordenados por dados de retirada:
 #### SELECT Contrato, Data_Retirada, Valor FROM Aluguel WHERE Valor > 400.00 ORDER BY Data_Retirada;
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Filtro%205.PNG" alt="Filtro 05">
 
 #### 6 Veja os atendimentos realizados em 2023, organizados pelos dados de atendimento:
 #### SELECT Id_Atendimento, Data_Atendimento FROM Atendimento WHERE YEAR(Data_Atendimento) = 2023 ORDER BY Data_Atendimento;
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Filtro%206.PNG" alt="Filtro 06">
 
 #### 7 Listar os clientes que alugaram veículos em 2023, planejados pelo nome:
 #### SELECT CPF, Nome FROM Cliente WHERE CPF IN (SELECT Cliente_cpf FROM Aluguel WHERE YEAR(Data_Retirada) = 2023) ORDER BY Nome;
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Filtro%207.PNG" alt="Filtro 07">
 
 #### 8 Veja os tipos de veículos com tarifa diária acima de R$150, ordenados pela tarifa em ordem decrescente:
 #### SELECT Categoria, Tarifa_Diaria FROM Tipo_Veiculo WHERE Tarifa_Diaria > 150.00 ORDER BY Tarifa_Diaria DESC;
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Filtro%208.PNG" alt="Filtro 08">
 
 #### 9 Listar os tipos de veículos com capacidade de passageiros superior a 5, ordenados pela capacidade em ordem decrescente:
 #### SELECT Categoria, Capacidade_Passageiros FROM Tipo_Veiculo WHERE Capacidade_Passageiros > 5 ORDER BY Capacidade_Passageiros DESC;
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Filtro%209.PNG" alt="Filtro 09">
 
 #### 10 Mostre os veículos que ainda não foram oferecidos, exibindo placa, modelo, ano de fabricação e situação, ordenados por ano de fabricação:
 #### SELECT Placa, Modelo, Ano_Fabricacao, Situacao FROM Veiculo WHERE Situacao = 'Disponível' OR Situacao IS NULL ORDER BY Ano_Fabricacao;
+<img src="https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados/blob/main/Filtro%2010.PNG" alt="Filtro 10">
+
 ---
-## 🛠️ Construído com
+## 🛠️ Construído com:
 * Draw.io
 * Sqlserver
 ---
 ---
-## Link do projeto
-```
+## Link do projeto:
 
-
-
+https://github.com/Fredericobarbosa/Trabalho-Final-Modelagem-de-Banco-de-Dados
